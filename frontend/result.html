@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Score Result | National University Quiz & Examination System</title>
+<link rel="icon" href="assets/nu-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="page">
+  <header class="brand-bar no-print">
+    <span class="brand-link">
+      <img class="brand-mark" src="assets/nu-logo.png" alt="National University crest" />
+      <span class="brand-name">National University<small>Quiz &amp; Examination System</small></span>
+    </span>
+  </header>
+
+  <main class="content">
+    <div class="result-shell">
+
+      <div class="result-band">
+        <div class="score-hero">
+          <div class="score-value" id="score-value">0/0</div>
+          <div class="score-label" id="score-label">questions correct</div>
+        </div>
+
+        <div class="result-info">
+          <div class="result-heading">
+            <div>
+              <p class="hero-kicker"><span class="rule-mark"></span>Exam complete</p>
+              <h1>Score report</h1>
+            </div>
+            <img class="report-mark" src="assets/nu-logo.png" alt="National University crest" />
+          </div>
+          <div class="summary-grid">
+            <div class="summary-item"><div class="label">Name</div><div class="value" id="summary-name">-</div></div>
+            <div class="summary-item"><div class="label">Block</div><div class="value" id="summary-block">-</div></div>
+            <div class="summary-item"><div class="label">Subject</div><div class="value" id="summary-subject">-</div></div>
+            <div class="summary-item"><div class="label">Exam type</div><div class="value" id="summary-examtype">-</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-panel">
+        <div class="review-heading">
+          <div>
+            <h2>Answer review</h2>
+            <p>Review each response and compare it with the correct answer.</p>
+          </div>
+          <div class="review-legend" aria-label="Answer status legend">
+            <span><i class="legend-dot is-correct"></i>Correct</span>
+            <span><i class="legend-dot is-incorrect"></i>Review</span>
+          </div>
+        </div>
+        <div id="review-list"></div>
+      </div>
+
+      <div class="result-actions no-print">
+        <a class="btn btn-ghost" id="home-btn" href="home.html">Back to home</a>
+        <button type="button" class="btn btn-accent" id="pdf-btn">Download PDF</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer no-print">
+    <div class="footer-line">National University &middot; Quiz &amp; Examination System</div>
+    <div class="footer-line">Keep a copy of this report for your records.</div>
+  </footer>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/pages/result.js"></script>
+</body>
+</html>

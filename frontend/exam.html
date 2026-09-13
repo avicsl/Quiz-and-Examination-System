@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz and Examination | National University Quiz & Examination System</title>
+<link rel="icon" href="assets/nu-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="page">
+  <header class="brand-bar">
+    <span class="brand-link">
+      <img class="brand-mark" src="assets/nu-logo.png" alt="National University crest" />
+      <span class="brand-name">National University<small>Quiz &amp; Examination System</small></span>
+    </span>
+    <div class="brand-sub" id="student-label"></div>
+  </header>
+
+  <main class="content">
+    <div class="exam-shell">
+      <aside class="exam-sidebar">
+        <div class="sidebar-heading">
+          <h2>Answer sheet</h2>
+          <span id="question-counter">1 of 1</span>
+        </div>
+
+        <div class="timer-block">
+          <span class="timer" id="timer">00:00</span>
+          <span class="timer-caption">time remaining</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+        <div class="qnav-grid" id="qnav-grid"></div>
+        <div class="qnav-legend">
+          <span><i class="is-answered"></i>Answered</span>
+          <span><i></i>Unanswered</span>
+        </div>
+      </aside>
+
+      <section class="exam-main">
+        <div class="exam-meta">
+          <span>Answer every item, then submit when ready.</span>
+        </div>
+
+        <div id="question-area"></div>
+        <div class="field-error" id="answer-error" style="display:none;margin-bottom:1rem;">
+          Choose an answer before continuing.
+        </div>
+
+        <div class="exam-footer">
+          <button type="button" class="btn btn-primary" id="submit-btn">Submit Exam</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer no-print">
+    <div class="footer-line">Your progress is saved automatically as you answer. Submitting is final.</div>
+  </footer>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/mockData.js"></script>
+<script src="js/api.js"></script>
+<script src="js/pages/exam.js"></script>
+</body>
+</html>
