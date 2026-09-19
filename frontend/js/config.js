@@ -7,8 +7,8 @@
  * Set MOCK_MODE to false once a real backend is running.
  */
 const CONFIG = {
-  API_BASE: "http://localhost:4000",
-  MOCK_MODE: true,
+  API_BASE: "http://localhost:5000",
+  MOCK_MODE: false,
 
   SUBJECTS: [
     { id: "first-sub", code: "1 - Course Code", name: "1 - Subject Name" },

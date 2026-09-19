@@ -103,7 +103,7 @@
       examTypeId: session.examTypeId,
       answers: questions.map((question) => ({ questionId: question.id, choiceIndex: answers[question.id] }))
     });
-    Store.set({ result: result.result });
+    Store.set({ result: result.result, resultId: result.result?.studentId });
     window.location.href = "result.html";
   }
 
