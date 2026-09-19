@@ -24,7 +24,14 @@ const API = {
   },
 
   async submitExam(payload) {
-    // payload: { studentId, subjectId, examTypeId, answers: [{questionId, choiceIndex}] }
+    const session = typeof Store !== "undefined" ? Store.get() : {};
+    const fullPayload = {
+      name: session.name || payload.name,
+      section: session.block || payload.section || payload.block,
+      block: session.block || payload.block,
+      ...payload
+    };
+
     if (CONFIG.MOCK_MODE) {
       await API._delay();
       const questions = getMockQuestions(payload.subjectId, payload.examTypeId);
@@ -60,7 +67,7 @@ const API = {
         }
       };
     }
-    return API._post("/submit-exam", payload);
+    return API._post("/submit-exam", fullPayload);
   },
 
   async downloadResultPdf(resultId) {
